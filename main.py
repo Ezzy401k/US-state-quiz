@@ -43,6 +43,10 @@ while game_is_on:
             # Use a custom module to fetch and display the state name on the map
             name = fetch_name.FetchName(answer_state, x, y)
 
+        if count == 50:
+            print("You Win!")
+            break
+
 # Create a list of states not yet guessed
 study = [state for state in data_list if state not in answers]
 
